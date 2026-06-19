@@ -1,15 +1,43 @@
 /* style.css */
-/* Root variables for color palette */
+/* Updated color palette */
 :root {
   --font-primary: 'Montserrat', sans-serif;
-  --color-bg: #010101;
-  --color-primary: #5b0eeb; /* deep purple */
-  --color-secondary: #0a0a3c; /* dark navy */
-  --color-accent: #ff4ecc; /* vivid pink for accents */
-  --color-text: #f5f5f5;
-  --color-glass: rgba(255, 255, 255, 0.05);
-  --color-glass-border: rgba(255, 255, 255, 0.15);
+  --color-bg: #000000; /* black background */
+  --color-primary: #ffffff; /* white for accents */
+  --color-secondary: #ffffff;
+  --color-accent: #ffffff;
+  --color-text: #ffffff; /* white text */
+  --color-glass: rgba(255,255,255,0.05);
+  --color-glass-border: rgba(255,255,255,0.15);
 }
+
+/* Ensure all titles are uppercase and centered */
+h1, h2, .section h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Center contact section text */
+#contact .container {
+  text-align: center;
+}
+
+/* CTA button styling – black background with white text */
+.cta-button {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Adjust other accent colors that used previous colors */
+.logo { color: var(--color-text); }
+.nav-links a { color: var(--color-text); }
+.nav-links a:hover { color: var(--color-accent); }
+.listen-link { color: var(--color-primary); }
+.listen-link:hover { color: var(--color-accent); }
+.ticket-link { color: var(--color-primary); }
+.ticket-link:hover { color: var(--color-accent); }
+.submit-btn { background: var(--color-primary); color: var(--color-bg); }
+.submit-btn:hover { background: var(--color-accent); }
 
 /* Global resets */
 * {
@@ -24,7 +52,8 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  background: var(--color-bg);
+
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
